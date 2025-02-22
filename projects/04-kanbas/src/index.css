@@ -6,6 +6,11 @@
 
 @layer base {
   body {
+    background-color: #e6e6e6;
     font-family: 'Roboto', sans-serif;
+    color: #fff;
+    line-height: 1.5;
+    background-repeat: no-repeat;
+    height: 100vh;
   }
 }
