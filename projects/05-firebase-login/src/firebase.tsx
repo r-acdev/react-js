@@ -1,7 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 
-
 interface FirebaseConfing  {
     apiKey: string,
     authDomain: string,
