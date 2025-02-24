@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {@apply 
+  h-full
+  min-h-screen
+  font-poppins
+  text-white
+  bg-neutral-900
+}
+
+h1,h2, h3, h4 {@apply 
+  font-poppins
+  text-base 
+  font-bold;
+  box-sizing: border-box; 
+}
