@@ -42,9 +42,10 @@ const SingUp = () => {
     };
 
     return (
-        <div className="">
-            <div className="">
-                <h1 className="">Register</h1>
+        <div className="bg-white p-10 rounded-lg shadow-lg w-full max-w-md text-night">
+            <div>
+                <h1 className="mb-4 font-medium">Register</h1>
+                <div className="m-6">
                 <InputControl
                     label="Name"
                     placeholder="Ingrese un nombre"
@@ -63,16 +64,17 @@ const SingUp = () => {
                     name="pass"
                     onChange={handleChange}
                 />
-                <div className="">
+                </div>
+                <div>
                     {errorMsg && <p className="">{errorMsg}</p>}
                     <button 
                     onClick={register}
                     disabled={submitButtonDisabled}
-                    className=""
+                    className="text-white mt-2"
                     >
                         Register
                     </button>
-                    <p>
+                    <p className="mt-4">
                         Already have an account? <Link to="/login">Login</Link>
                     </p>
                 </div>

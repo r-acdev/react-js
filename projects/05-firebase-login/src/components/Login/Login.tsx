@@ -38,32 +38,32 @@ const Login = () => {
     };
 
     return (
-        <div className="">
-            <div className="">
-                <h1 className="">
-                    Login
-                </h1>
-                <InputControl 
-                    label="Email"
-                    placeholder="Email"
-                    name="email"
-                    onChange={handleChange}
-                />
-                <InputControl
-                    label="Password"
-                    placeholder="Password"
-                    name="pass"
-                    onChange={handleChange}
-                />
-                <div className="">
-                    {errorMsg && <p className="">{errorMsg}</p>}
-                    <button onClick={login} disabled={submitButtonDisabled} className="">
+        <div className="bg-white p-10 rounded-lg shadow-lg w-full max-w-md text-night">
+            <div className="m-4">
+                <h1 className="mb-4 font-medium">Login</h1>
+                <div>
+                    <InputControl 
+                        label="Email"
+                        placeholder="Email"
+                        name="email"
+                        onChange={handleChange}
+                    />
+                    <InputControl
+                        label="Password"
+                        placeholder="Password"
+                        name="pass"
+                        onChange={handleChange}
+                    />
+                </div>
+                <div>
+                    {errorMsg && <p className="text-red-500 mb-4">{errorMsg}</p>}
+                    <button onClick={login} disabled={submitButtonDisabled} className="text-white mt-2">
                         Login btn
                     </button>
-                    <p>
+                    <p className="mt-4">
                         New user?
                         <span>
-                            <Link to="/singup">Create account here</Link>
+                            <Link to="/singup"> Create account here</Link>
                         </span>
                     </p>
                 </div>
