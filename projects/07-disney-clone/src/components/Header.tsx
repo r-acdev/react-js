@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import logo from '../assets/logo.svg';
-import user from "../assets/user.png"
+import logo from '../assets/images/logo.svg';
+import user from "../assets/Images/user.png";
 import { 
   HiHome,
   HiMagnifyingGlass,
