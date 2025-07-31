@@ -25,14 +25,14 @@ export const Slider = () => {
             setMovieList(resp.data.results);
         })
     };
-    const sliderRight=(element: HTMLDivElement | null) => {
-        if (!element) return;
-        element.scrollLeft+=window.innerWidth-110;
-    }
-    const sliderLeft=(element: HTMLDivElement | null) => {
-        if (!element) return;
-        element.scrollLeft-=window.innerWidth-110;    
-    }
+
+    const sliderRight = (element: HTMLDivElement | null) => {
+        if (element) element.scrollLeft += 500;
+    };
+    const sliderLeft = (element: HTMLDivElement | null) => {
+        if (element) element.scrollLeft -= 500;
+    };
+
   return (
     <div className='relative'>
         <HiChevronLeft className='hidden md:block text-white text-[30px] absolute mx-8 mt-[250px] cursor-pointer z-10' onClick={() => sliderLeft(elementRef.current)}/>
