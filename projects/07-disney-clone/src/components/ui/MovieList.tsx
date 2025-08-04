@@ -69,9 +69,9 @@ export const MovieList = ({ genereId }: MovieListProps) => {
       >
         {movieList.map((item, index) => (
           index % 3 === 0 ? (
-            <HrMovieCard movie={item}/>
+            <HrMovieCard key={item.id} movie={item}/>
           ) : (
-            <MovieCard movie={item}/>
+            <MovieCard key={item.id} movie={item}/>
           )
         ))}
       </div>
