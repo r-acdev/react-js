@@ -65,7 +65,7 @@ export const MovieList = ({ genereId }: MovieListProps) => {
       {/* Contenedor de las tarjetas */}
       <div 
         ref={elementRef} 
-        className='flex overflow-x-auto scrollbar-hide scroll-smooth pt-4 px-3 pb-4'
+        className='flex overflow-x-auto scrollbar-hide scroll-smooth pt-4 px-3 pb-4 gap-1'
       >
         {movieList.map((item, index) => (
           index % 3 === 0 ? (
