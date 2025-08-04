@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import logo from '../assets/images/logo.svg';
-import user from "../assets/Images/user.png";
+import user from "../assets/images/user.png";
 import { 
   HiHome,
   HiMagnifyingGlass,
@@ -51,7 +51,7 @@ export const Header = () => {
   return (
     
     <>
-        <div className='flex items-center justify-between p-5'>
+        <div className='flex items-center justify-between p-5 sticky top-0 z-50 bg-[#0d1029]'>
           <div className='flex items-center gap-8'>
             {/* Logo */}
             <img src={logo} alt="logo" className='w-[80px] lg:w-[105px] object-cover p-2'/>
