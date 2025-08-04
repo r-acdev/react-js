@@ -27,10 +27,10 @@ export const Slider = () => {
     };
 
     const sliderRight = (element: HTMLDivElement | null) => {
-        if (element) element.scrollLeft += 500;
+        if (element) element.scrollLeft += 1280;
     };
     const sliderLeft = (element: HTMLDivElement | null) => {
-        if (element) element.scrollLeft -= 500;
+        if (element) element.scrollLeft -= 1280;
     };
 
   return (
