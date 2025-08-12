@@ -8,25 +8,17 @@ function App() {
   const h1Ref = useRef(null);
   const headerRef = useRef(null);
   const h2Ref = useRef(null);
-  const h3Ref = useRef(null);
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
 
       if (headerRef.current) {
         gsap.from(headerRef.current, {
-          // Cuento tiempo va a pasar despues de que cargue la pagina
           delay: 0.2, // Empezar después de 0.2s
           opacity: 0,
-
-          // Viene desde abajo hacia arriba
           y: -30,
-
-          // Cuanto tiempo va a durar la animacion
           duration: 0.5,
-          stagger: 0.2, // La magia: aplica la animación a cada hijo con 0.2s de diferencia
-          // Tamaño de animacion
-          scale: 3,
+          stagger: 0.2 // La magia: aplica la animación a cada hijo con 0.2s de diferencia
         });
       }
 
@@ -35,11 +27,10 @@ function App() {
           // Animación consistente con los logos
           delay: 0.8, // Retraso para que empiece cuando los logos casi han terminado
           opacity: 0,
+          // Viene desde abajo hacia arriba
           y: 30, // Animar desde abajo para un efecto diferente
           duration: 0.8,
-
-          // Tipo de transiciones, ver la documentacion en https://gsap.com/docs/v3/Eases
-          ease: 'power3.in' // Suaviza el final de la animación
+          ease: 'power3.out' // Suaviza el final de la animación
         })
       }
 
@@ -51,21 +42,12 @@ function App() {
           opacity: 0,
           // Viene desde los verticales
           x: -500,
-          duration: 4,
+          duration: 0.8,
           rotate: 360,
-          ease: 'steps(10)'
+          ease: 'power3.out'
         })
       }
     });
-
-    if(h3Ref.current) {
-      gsap.from(h3Ref.current, {
-        y:-200,
-        ease: 'power1.out',
-        duration: 0.8,
-        stagger: 0.5
-      })
-    }
 
     // La función de limpieza que se ejecutará cuando el componente se desmonte
     return () => ctx.revert();
@@ -74,11 +56,6 @@ function App() {
 
   return (
     <>
-      <div className="flex gap-5 justify-center" >
-        <h3 ref={h3Ref} className='text-3xl font-bold text-white'>Home</h3>
-        <h3 ref={h3Ref} className='text-3xl font-bold text-white'>Contacto</h3>
-        <h3 ref={h3Ref} className='text-3xl font-bold text-white'>Test</h3>
-      </div>
       <header className='flex items-center' ref={headerRef}>
         <a>
           <img src={viteLogo} className="logo" alt="Vite logo" />
@@ -89,8 +66,6 @@ function App() {
       </header>
       <h1 ref={h1Ref} className='text-3xl font-bold text-white'>Animacion 1</h1>
       <h2 ref={h2Ref} className='text-3xl font-bold text-white'>Animacion 2</h2>
-      <br /> 
-      
       
     </>
   )
