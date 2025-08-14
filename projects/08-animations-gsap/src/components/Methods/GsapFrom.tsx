@@ -1,10 +1,9 @@
 import { useLayoutEffect, useRef } from 'react'
-import reactLogo from './assets/react.svg'
+import reactLogo from '../../assets/react.svg'
 import viteLogo from '/vite.svg'
 import { gsap } from "gsap";
-import './App.css'
 
-function App() {
+const GsapFrom = () => {
   const h1Ref = useRef(null);
   const headerRef = useRef(null);
   const h2Ref = useRef(null);
@@ -56,7 +55,7 @@ function App() {
 
   return (
     <>
-      <header className='flex items-center' ref={headerRef}>
+      <header className='flex justify-center items-center gap-5' ref={headerRef}>
         <a>
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
@@ -71,4 +70,4 @@ function App() {
   )
 }
 
-export default App
+export default GsapFrom
