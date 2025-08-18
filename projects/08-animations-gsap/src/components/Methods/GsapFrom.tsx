@@ -11,15 +11,14 @@ const GsapFrom = () => {
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
 
-      if (headerRef.current) {
-        gsap.from(headerRef.current, {
-          delay: 0.2, // Empezar después de 0.2s
-          opacity: 0,
-          y: -30,
-          duration: 0.5,
-          stagger: 0.2 // La magia: aplica la animación a cada hijo con 0.2s de diferencia
-        });
-      }
+      if (!headerRef.current) return;
+      gsap.from(headerRef.current, {
+        delay: 0.2, // Empezar después de 0.2s
+        opacity: 0,
+        y: -30,
+        duration: 0.5,
+        stagger: 0.2 // La magia: aplica la animación a cada hijo con 0.2s de diferencia
+      });
 
       if (h1Ref.current) {
         gsap.from(h1Ref.current, {
